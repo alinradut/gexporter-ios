@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DCB-Te-kfP">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9ei-Ex-K2I">
+            <objects>
+                <navigationController id="DCB-Te-kfP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qpJ-LF-2aj">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qGK-6r-Mjd" kind="relationship" relationship="rootViewController" id="77o-i2-wws"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcm-Nw-PXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922" y="75"/>
+        </scene>
+        <!--gexporter-->
+        <scene sceneID="kcA-fd-GYz">
+            <objects>
+                <tableViewController id="qGK-6r-Mjd" customClass="FileListViewController" customModule="gexporter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kLw-JL-aJl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="2I5-5L-60h">
+                            <rect key="frame" x="0.0" y="72" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-rB-QQU">
+                                    <rect key="frame" x="91.666666666666686" y="9" width="193" height="34"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="How to add more tracks"/>
+                                    <connections>
+                                        <action selector="onHelpBtnTapped:" destination="qGK-6r-Mjd" eventType="touchUpInside" id="Dsw-GI-JGt"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="wIi-rB-QQU" firstAttribute="centerX" secondItem="2I5-5L-60h" secondAttribute="centerX" id="Fxk-4L-CiF"/>
+                                <constraint firstItem="wIi-rB-QQU" firstAttribute="centerY" secondItem="2I5-5L-60h" secondAttribute="centerY" id="a2X-oH-tKJ"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FileCell" textLabel="qY0-d7-y6i" style="IBUITableViewCellStyleDefault" id="ANi-xm-QMT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ANi-xm-QMT" id="Ch1-LS-Ngx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qY0-d7-y6i">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qGK-6r-Mjd" id="beb-nH-C2Q"/>
+                            <outlet property="delegate" destination="qGK-6r-Mjd" id="JLO-Ss-PBg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="gexporter" id="lxH-fU-cNN">
+                        <barButtonItem key="leftBarButtonItem" title="Devices" id="9hG-Rk-211">
+                            <connections>
+                                <action selector="onDevicesBtnTapped:" destination="qGK-6r-Mjd" id="EcQ-8H-8HH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="WWC-z8-ebD">
+                            <connections>
+                                <action selector="onRefreshFilesBtnTapped:" destination="qGK-6r-Mjd" id="Su4-S3-Z1r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="FPW-px-jhb" kind="presentation" identifier="DevicesSegue" id="F1B-8o-c9i"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcC-BN-VhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87.200000000000003" y="74.630541871921181"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="arI-2U-CJU">
+            <objects>
+                <navigationController id="FPW-px-jhb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KBc-Vd-lrS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kL0-YD-DO7" kind="relationship" relationship="rootViewController" id="LTP-AR-dv3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLH-p8-nI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="75"/>
+        </scene>
+        <!--gexporter-->
+        <scene sceneID="O6g-da-giN">
+            <objects>
+                <tableViewController id="kL0-YD-DO7" customClass="DevicesViewController" customModule="gexporter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xC5-YA-WWh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="IXM-7U-LNZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKx-AU-pO3">
+                                    <rect key="frame" x="16" y="16" width="343" height="162.33333333333334"/>
+                                    <mutableString key="text">To connect you need to have the "gimporter" app installed on your wearable device and Garmin Connect Mobile application installed on this device.  Tap the button below to open it. If you don't have it installed yet, you will be prompted to do so from the AppStore.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzL-yQ-t1z">
+                                    <rect key="frame" x="158" y="194.33333333333334" width="59" height="30"/>
+                                    <state key="normal" title="Connect"/>
+                                    <connections>
+                                        <action selector="onConnectBtnTapped:" destination="kL0-YD-DO7" eventType="touchUpInside" id="x9q-Ic-1oi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="DzL-yQ-t1z" firstAttribute="top" secondItem="AKx-AU-pO3" secondAttribute="bottom" constant="16" id="7II-4q-1Jh"/>
+                                <constraint firstAttribute="trailing" secondItem="AKx-AU-pO3" secondAttribute="trailing" constant="16" id="QDX-UT-vub"/>
+                                <constraint firstItem="AKx-AU-pO3" firstAttribute="leading" secondItem="IXM-7U-LNZ" secondAttribute="leading" constant="16" id="ZJ6-PJ-i9B"/>
+                                <constraint firstItem="DzL-yQ-t1z" firstAttribute="centerX" secondItem="AKx-AU-pO3" secondAttribute="centerX" id="mk3-dB-mQI"/>
+                                <constraint firstItem="AKx-AU-pO3" firstAttribute="top" secondItem="IXM-7U-LNZ" secondAttribute="top" constant="16" id="v7h-8W-r2i"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="ZAR-fY-SIg">
+                            <rect key="frame" x="0.0" y="324" width="375" height="99"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once your device is connected, start the gimporter app on your wearable device." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVE-A4-Whf">
+                                    <rect key="frame" x="16" y="16" width="343" height="67"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="zVE-A4-Whf" secondAttribute="bottom" constant="16" id="CmP-gI-JXY"/>
+                                <constraint firstAttribute="trailing" secondItem="zVE-A4-Whf" secondAttribute="trailing" constant="16" id="DgE-Pz-PVz"/>
+                                <constraint firstItem="zVE-A4-Whf" firstAttribute="leading" secondItem="ZAR-fY-SIg" secondAttribute="leading" constant="16" id="mc2-vt-QV5"/>
+                                <constraint firstItem="zVE-A4-Whf" firstAttribute="top" secondItem="ZAR-fY-SIg" secondAttribute="top" constant="16" id="ruq-ZM-dKS"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceCell" textLabel="lCx-fU-27N" detailTextLabel="rPj-83-mbB" style="IBUITableViewCellStyleSubtitle" id="kSP-6v-39w">
+                                <rect key="frame" x="0.0" y="280" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kSP-6v-39w" id="FBT-JG-5S2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Connected device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lCx-fU-27N">
+                                            <rect key="frame" x="16" y="5" width="139" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rPj-83-mbB">
+                                            <rect key="frame" x="16" y="25.333333333333332" width="30" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="kL0-YD-DO7" id="SIF-wM-adD"/>
+                            <outlet property="delegate" destination="kL0-YD-DO7" id="tgP-gb-kFc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="gexporter" id="oDi-D4-0AH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9mM-6Z-orn">
+                            <connections>
+                                <action selector="onDoneBtnTapped:" destination="kL0-YD-DO7" id="P0M-cb-Pty"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTj-VQ-rSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="75"/>
+        </scene>
+    </scenes>
+</document>
