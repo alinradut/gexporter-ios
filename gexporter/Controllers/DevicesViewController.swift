@@ -9,29 +9,6 @@
 import UIKit
 import ConnectIQ
 
-protocol Injector {
-    
-    static func defaultInjector() -> Injector
-    func devicesManager() -> DevicesManager
-}
-
-extension Injector {
-    static func defaultInjector() -> Injector {
-        return MainInjector()
-    }
-}
-
-class MainInjector: Injector {
-    
-    func connectIQ() -> ConnectIQ {
-        return ConnectIQ.sharedInstance()
-    }
-    
-    func devicesManager() -> DevicesManager {
-        return DevicesManager.init(connectIq: connectIQ())
-    }
-}
-
 class DevicesViewController: UITableViewController {
     
     var devicesManager: DevicesManager! {
