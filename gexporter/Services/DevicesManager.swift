@@ -28,7 +28,7 @@ class DevicesManager {
     }
     
     func importDevicesFromUrl(_ url: URL) {
-        devices = connectIq.parseDeviceSelectionResponse(from: url)?.compactMap({ $0 as? IQDevice }) ?? []
+        devices = connectIq.parseDeviceSelectionResponse(from: url)?.compactMap({ $0 as? IQDevice }).filter({ $0.uuid != nil }) ?? []
         store.store(devices: devices)
         onDevicesChanged?()
     }

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var serviceManager = ServiceManager.shared
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         customizeAppearance()
         serviceManager.webServer.start()
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func customizeAppearance() {
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().tintColor = UIColor.white
