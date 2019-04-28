@@ -35,10 +35,12 @@ class WebServer {
             
             guard path != "/dir.json",
                 method == "GET",
-                query["type"] as? String == "GPX"
+                query["type"] == "GPX"
                 else {
                 return nil
             }
+            var headers = headers
+            headers["Cache-Control"] = "no-cache"
             return GCDWebServerRequest(method: method, url: url, headers: headers, path: path, query: query)
             
         }) { [weak self] (request) -> GCDWebServerResponse? in
@@ -49,10 +51,12 @@ class WebServer {
             
             guard path != "/dir.json",
                 method == "GET",
-                query["type"] as? String == "FIT"
+                query["type"] == "FIT"
                 else {
                     return nil
             }
+            var headers = headers
+            headers["Cache-Control"] = "no-cache"
             return GCDWebServerRequest(method: method, url: url, headers: headers, path: path, query: query)
             
         }) { [weak self] (request) -> GCDWebServerResponse? in
@@ -70,11 +74,11 @@ class WebServer {
     }
     
     private func handleListing(_ request: GCDWebServerRequest) -> GCDWebServerResponse? {
-        guard let rawType = request.query?["type"] as? String,
+        guard let rawType = request.query?["type"],
             let type = FileType(rawValue: rawType) else {
                 return responseFactory.badRequest()
         }
-        let shortFilenames = request.query?["short"] as? String == "1"
+        let shortFilenames = request.query?["short"] == "1"
         
         var files: [File] = []
         
